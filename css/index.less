@@ -1,0 +1,216 @@
+@import url(./normalize.min.css);
+@import url(./fonts.css);
+@import url(./variables.css);
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: var(--xxxl);
+	background-color: black;
+	font-family: Arial, Helvetica, sans-serif;
+
+	.yt-logo {
+		height: 24px;
+	}
+
+	.flex {
+		display: flex;
+		align-items: stretch;
+
+		span {
+			color: white;
+		}
+	}
+
+	.flex.A,
+	.flex.C {
+		gap: var(--xxxl);
+	}
+
+	.flex.B {
+		input {
+			padding: var(--l) var(--xxl) var(--l) var(--xxl);
+			border-radius: var(--xxl) 0 0 var(--xxl);
+			border: 2px white solid;
+			outline: none;
+			color: white;
+			background-color: black;
+
+			&__:focus-visible {
+				border: red;
+			}
+		}
+
+		.search-icon {
+			padding: var(--l) var(--xxl) var(--l) var(--xxl);
+			border-radius: 0 var(--xxl) var(--xxl) 0;
+			border: 2px white solid;
+			border-left: none;
+		}
+	}
+}
+
+main {
+	padding: var(--xxl);
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: Arial, Helvetica, sans-serif;
+
+	.video {
+		width: 60%;
+
+		video {
+			max-width: 100%;
+		}
+
+		div.info {
+			display: flex;
+			flex-direction: column;
+			gap: var(--xl);
+
+			div.hashtags {
+				a {
+					color: #75feff;
+					text-decoration: none;
+					font-size: 0.85em;
+				}
+			}
+
+			div.title h1 {
+				font-size: 1.25em;
+			}
+
+			div.channel {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				div.group {
+					display: flex;
+					align-items: center;
+				}
+
+				div.group.B .btn-container {
+					display: flex;
+					gap: var(--xxl);
+					user-select: none;
+				}
+
+				div.group.A {
+					gap: var(--xxl);
+
+					a {
+						display: flex;
+						align-items: center;
+						gap: var(--xl);
+						text-decoration: none;
+
+						.vertical-container {
+							display: flex;
+							flex-direction: column;
+
+							p {
+								font-size: 0.7em;
+							}
+						}
+					}
+
+					p.subscribe-btn {
+						color: black;
+						padding: var(--xl);
+						border-radius: var(--xxl);
+						background-color: rgb(230, 230, 230);
+						display: flex;
+						align-items: center;
+						height: 30px;
+					}
+				}
+
+				a img.logo-channel {
+					width: 40px;
+					border-radius: 100%;
+				}
+			}
+		}
+		div.desc{
+			div.video-details{
+				gap: var(--xxxl);
+				margin-bottom: var(--xl);
+			}
+			div.video-details div{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: var(--l);
+				span{
+					user-select: none;
+				}
+			}
+			div.video-details{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				p{
+					font-size: 0.85em;
+				}
+			}
+			a {
+				color: #4ed4ff;
+				text-decoration: none;
+			}
+		}
+	}
+
+	p,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: white;
+	}
+
+	span {
+		color: white;
+	}
+}
+
+.clickable {
+	cursor: pointer;
+	user-select: none;
+}
+
+@media (max-width: 800px) {
+
+	span.flex:has(img.yt-logo),
+	span.createvideo {
+		display: none;
+	}
+
+	main .video {
+		width: 95%;
+
+		.info .channel {
+			flex-wrap: wrap;
+			justify-content: center !important;
+			gap: var(--xxl) !important;
+		}
+	}
+
+	main .video div.info div.title h1 {
+		text-align: center;
+	}
+
+	div.hashtags {
+		display: flex;
+		gap: var(--xxl);
+		justify-content: center;
+	}
+	div.title h1 {
+		font-size: 1.15em !important;
+	}
+}

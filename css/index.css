@@ -1,0 +1,178 @@
+@import url(normalize.min.css);
+@import url(fonts.css);
+@import url(variables.css);
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--xxxl);
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+header .yt-logo {
+  height: 24px;
+}
+header .flex {
+  display: flex;
+  align-items: stretch;
+}
+header .flex span {
+  color: white;
+}
+header .flex.A,
+header .flex.C {
+  gap: var(--xxxl);
+}
+header .flex.B input {
+  padding: var(--l) var(--xxl) var(--l) var(--xxl);
+  border-radius: var(--xxl) 0 0 var(--xxl);
+  border: 2px white solid;
+  outline: none;
+  color: white;
+  background-color: black;
+}
+header .flex.B input__:focus-visible {
+  border: red;
+}
+header .flex.B .search-icon {
+  padding: var(--l) var(--xxl) var(--l) var(--xxl);
+  border-radius: 0 var(--xxl) var(--xxl) 0;
+  border: 2px white solid;
+  border-left: none;
+}
+main {
+  padding: var(--xxl);
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main .video {
+  width: 60%;
+}
+main .video video {
+  max-width: 100%;
+}
+main .video div.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--xl);
+}
+main .video div.info div.hashtags a {
+  color: #75feff;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+main .video div.info div.title h1 {
+  font-size: 1.25em;
+}
+main .video div.info div.channel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .video div.info div.channel div.group {
+  display: flex;
+  align-items: center;
+}
+main .video div.info div.channel div.group.B .btn-container {
+  display: flex;
+  gap: var(--xxl);
+  user-select: none;
+}
+main .video div.info div.channel div.group.A {
+  gap: var(--xxl);
+}
+main .video div.info div.channel div.group.A a {
+  display: flex;
+  align-items: center;
+  gap: var(--xl);
+  text-decoration: none;
+}
+main .video div.info div.channel div.group.A a .vertical-container {
+  display: flex;
+  flex-direction: column;
+}
+main .video div.info div.channel div.group.A a .vertical-container p {
+  font-size: 0.7em;
+}
+main .video div.info div.channel div.group.A p.subscribe-btn {
+  color: black;
+  padding: var(--xl);
+  border-radius: var(--xxl);
+  background-color: #e6e6e6;
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+main .video div.info div.channel a img.logo-channel {
+  width: 40px;
+  border-radius: 100%;
+}
+main .video div.desc div.video-details {
+  gap: var(--xxxl);
+  margin-bottom: var(--xl);
+}
+main .video div.desc div.video-details div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--l);
+}
+main .video div.desc div.video-details div span {
+  user-select: none;
+}
+main .video div.desc div.video-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .video div.desc div.video-details p {
+  font-size: 0.85em;
+}
+main .video div.desc a {
+  color: #4ed4ff;
+  text-decoration: none;
+}
+main p,
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  color: white;
+}
+main span {
+  color: white;
+}
+.clickable {
+  cursor: pointer;
+  user-select: none;
+}
+@media (max-width: 800px) {
+  span.flex:has(img.yt-logo),
+  span.createvideo {
+    display: none;
+  }
+  main .video {
+    width: 95%;
+  }
+  main .video .info .channel {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: var(--xxl) !important;
+  }
+  main .video div.info div.title h1 {
+    text-align: center;
+  }
+  div.hashtags {
+    display: flex;
+    gap: var(--xxl);
+    justify-content: center;
+  }
+  div.title h1 {
+    font-size: 1.15em !important;
+  }
+}
